@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .content {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .video-container {
+            margin: 20px auto;
+            width: 80%;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Push Up</h1>
+        <div class="video-container">
+            <!-- ภาพหรือวิดีโอที่คุณมีอยู่แล้ว -->
+            <img src="{{ url_for('video_pushup') }}" alt="ERROR generate">
+        </div>
+        <!-- ปุ่ม Home -->
+        <a href="/" class="button">Home</a>
+    </div>
+</body>
+</html>

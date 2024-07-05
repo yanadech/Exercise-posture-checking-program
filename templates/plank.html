@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plank</title>
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            text-align: left;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .exercise-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            padding: 10px;
+            margin: 10px auto;
+            font-size: 18px;
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: blue;
+            text-align: center;
+        }
+        .exercise-button span {
+            margin-left: 10px;
+        }
+        .challenge-button {
+            background-color: #FF4504;
+            color: white;
+        }
+        .challenge-button:hover {
+            background-color: #e03e00;
+        }
+        a.exercise-button:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>วิธีการทำท่า plank</h1>
+        <p>1.นอนระนาบกับพื้น หลังตรง </p>
+        <p>2.วางศอกทำมุมประมาณ 90 องศากับพื้น</p>
+        <p>3.ทำได้นานเท่าที่ต้องาร</p>
+        <!-- วิดีโอตัวอย่างการออกกำลังกาย -->
+        <div class="video-container">
+            <video controls>
+                <source src="{{ url_for('static', filename='videos/plank.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p>ความท้าทายคือ ทำได้นาน 1 นาที</p>
+        <a href="/plankcam" class="exercise-button">Camera<span>&#9654;</span></button></a>
+        <a href="/challengeplank" class="exercise-button challenge-button">Challenge<span>&#9654;</span></a>
+    </div>
+</body>
+</html>

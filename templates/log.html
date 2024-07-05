@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise Logs</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0"></script>
+</head>
+<body>
+    <h1>Exercise Logs</h1>
+    <canvas id="exerciseChart" width="400" height="200"></canvas>
+    <script>
+        var logs = JSON.parse('{{ logs | tojson | safe }}');
+        console.log("Logs from server:", logs);
+
+        if (Array.isArray(logs)) {
+            var labels = logs.map(function(log) {
+                return moment(log['date']).format('YYYY-MM-DDTHH:mm:ss');
+            });
+
+            var data = logs.map(function(log) {
+                return log['count'];
+            });
+
+            var ctx = document.getElementById('exerciseChart').getContext('2d');
+
+            var exerciseData = {
+                labels: labels,
+                datasets: [{
+                    label: "Exercise Logs",
+                    data: data,
+                    borderColor: 'rgb(255, 99, 132)',
+                    fill: false
+                }]
+            };
+
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: exerciseData,
+                options: {
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'day'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        } else {
+            console.error("logs is not an array:", logs);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ท่าออกกำลังกาย</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .exercise-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 200px;
+            padding: 10px;
+            margin: 10px auto;
+            font-size: 18px;
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: blue; /* กำหนดสีข้อความสำหรับปุ่ม Camera */
+        }
+        .exercise-button span {
+            float: right;
+        }
+        p {
+            font-size: 18px;
+            text-align: left;
+        }
+        a.exercise-button:hover {
+            text-decoration: none; /* ลบเส้นใต้เมื่อชี้เมาส์ */
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ท่าออกกำลังกาย</h1>
+        <a href="/squat" class="exercise-button">squat <span>&#9654;</span></a>
+        <a href="/pushup" class="exercise-button">push-up <span>&#9654;</span></a>
+        <a href="/plank" class="exercise-button">plank <span>&#9654;</span></a>
+        <a href="/lung" class="exercise-button">lunges <span>&#9654;</span></a>
+    </div>
+</body>
+</html>

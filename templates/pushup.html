@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ท่า Pushup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            text-align: left;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .exercise-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            padding: 10px;
+            margin: 10px auto;
+            font-size: 18px;
+            background-color: #e0e0e0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: blue;
+            text-align: center;
+        }
+        .exercise-button span {
+            margin-left: 10px;
+        }
+        .challenge-button {
+            background-color: #FF4504;
+            color: white;
+        }
+        .challenge-button:hover {
+            background-color: #e03e00;
+        }
+        a.exercise-button:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>วิธีการทำท่า Pushup</h1>
+        <p>1. นอนระนาบกับพื้น หลังตรงให้อยู่ประมาณช่วงมุม 170 องศา</p>
+        <p>2. มือวางข้างอก ขนานพื้น แขนเยียดตรง</p>
+        <p>3. เมื่อได้ยินสัญญาณ กางแขนออกจากลำตัวและเยียดเข่าขึ้นเยียดตรงกับหลัง</p>
+        <p>4. งอข้อพับแขนลงจนอกถึงพื้นและดันพื้นขึ้นกลับมาในท่าเริ่มต้นตามขั้นตอนที่ 1</p>
+        <p>5. ทำซ้ำตามที่ต้องการ</p>
+        <div class="video-container">
+            <video controls>
+                <source src="{{ url_for('static', filename='videos/push-up.mp4') }}" type="video/mp4">
+                เบราว์เซอร์ของคุณไม่รองรับแท็กวิดีโอ
+            </video>
+        </div>
+        <p>ความท้าทายคือ ทำจำนวนครั้งให้ได้ 22 ครั้ง ภายในเวลาจำกัด 1 นาที</p>
+        <a href="/pushupcam" class="exercise-button">Camera<span>&#9654;</span></a>
+        <a href="/challengepushup" class="exercise-button challenge-button">Challenge<span>&#9654;</span></a>
+    </div>
+</body>
+</html>
